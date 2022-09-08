@@ -37,7 +37,7 @@ const deleteWatchlist = async (req, res) => {
     await Watchlist.destroy({
       where: { id: req.params.watchlist_id }
     })
-    res.send(del)
+    res.send({ message: `Deleted watchlist with an id of ${del}` })
   } catch (error) {
     throw error
   }

@@ -37,7 +37,7 @@ const deleteStock = async (req, res) => {
     await Stock.destroy({
       where: { id: req.params.stock_id }
     })
-    res.send(del)
+    res.send({ message: `Deleted stock with an id of ${del}` })
   } catch (error) {
     throw error
   }
