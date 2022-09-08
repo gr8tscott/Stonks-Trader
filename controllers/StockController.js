@@ -3,7 +3,8 @@ const { Stock } = require('../models')
 const createStock = async (req, res) => {
   let create = await Stock.create({
     ...req.body,
-    stockId: req.query.ticker
+    stockId: req.query.ticker,
+    stockId: req.query.watchlistId
   })
   res.send(create)
 }

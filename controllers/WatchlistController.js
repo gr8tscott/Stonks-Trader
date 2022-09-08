@@ -3,7 +3,8 @@ const { Watchlist } = require('../models')
 const createWatchlist = async (req, res) => {
   let create = await Watchlist.create({
     ...req.body,
-    watchlistId: req.query.name
+    watchlistId: req.query.name,
+    watchlistId: req.query.userId
   })
   res.send(create)
 }
