@@ -1,11 +1,28 @@
-// require('dotenv').config()
+// {
+//   "development": {
+//     "database": "stonks_database",
+//     "host": "127.0.0.1",
+//     "dialect": "postgres"
+//   },
+//   "test": {
+//     "database": "stonks_test",
+//     "host": "127.0.0.1",
+//     "dialect": "postgres"
+//   },
+//   "production": {
+//     "database": "stonks_production",
+//     "host": "127.0.0.1",
+//     "dialect": "postgres"
+//   }
+// }
+require('dotenv').config()
 module.exports = {
   development: {
-    database: 'stonks_database',
+    database: 'stonks_test',
     dialect: 'postgres'
   },
   test: {
-    database: '<Your Database Test Name>',
+    database: 'stonks_test',
     dialect: 'postgres'
   },
   production: {
