@@ -1,7 +1,8 @@
 const Router = require('express').Router()
-const UserRouter = require('./UserRouter')
-const WatchlistRouter = require('./WatchlistRouter')
-const StockRouter = require('./StockRouter')
+
+const WatchlistRouter = require('./WatchlistRouter.js')
+const StockRouter = require('./StockRouter.js')
+const UserRouter = require('./UserRouter.js')
 
 Router.use('/user', UserRouter)
 Router.use('/watchlist', WatchlistRouter)
