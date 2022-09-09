@@ -18,7 +18,7 @@
 require('dotenv').config()
 module.exports = {
   development: {
-    database: 'stonks_test',
+    database: 'stonks_database',
     dialect: 'postgres'
   },
   test: {
