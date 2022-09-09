@@ -1,5 +1,5 @@
 const Router = require('express').Router()
-const controller = require('../controllers/stockController')
+const controller = require('../controllers/StockController')
 
 Router.get('/stock', controller.getStock)
 Router.post('/addstock', controller.createStock)

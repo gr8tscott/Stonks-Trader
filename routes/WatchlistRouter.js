@@ -1,5 +1,5 @@
 const Router = require('express').Router()
-const controller = require('../controllers/watchlistController')
+const controller = require('../controllers/WatchlistController.js')
 
 Router.get('/watchlist', controller.getWatchlist)
 Router.post('/addwatchlist', controller.createWatchlist)
