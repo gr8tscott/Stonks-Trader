@@ -15,7 +15,7 @@
 //     "dialect": "postgres"
 //   }
 // }
-require('dotenv').config()
+// require('dotenv').config()
 module.exports = {
   development: {
     database: 'stonks_database',
