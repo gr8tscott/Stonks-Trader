@@ -30,6 +30,18 @@ const getStocksByWatchlistId = async (req, res) => {
   }
 }
 
+const getStocksByPortfolioId = async (req, res) => {
+  try {
+    let portfolioId = parseInt(req.params.portfolio_id)
+    let stock = await Stock.findAll({
+      where: { portfolioId: portfolioId }
+    })
+    res.send(stock)
+  } catch (error) {
+    throw error
+  }
+}
+
 const updateStock = async (req, res) => {
   try {
     let update = await Stock.update(
@@ -60,5 +72,6 @@ module.exports = {
   createStock,
   updateStock,
   deleteStock,
-  getStocksByWatchlistId
+  getStocksByWatchlistId,
+  getStocksByPortfolioId
 }
