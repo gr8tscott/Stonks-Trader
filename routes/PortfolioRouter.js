@@ -5,5 +5,6 @@ Router.get('/portfolio', controller.getPortfolio)
 Router.post('/addportfolio', controller.createPortfolio)
 Router.delete('/:portfolio_id', controller.deletePortfolio)
 Router.put('/:portfolio_id', controller.updatePortfolio)
+Router.get('/:user_id', controller.getPortfolioByUserId)
 
 module.exports = Router

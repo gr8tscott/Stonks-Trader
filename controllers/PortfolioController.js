@@ -17,6 +17,17 @@ const getPortfolio = async (req, res) => {
     throw error
   }
 }
+const getPortfolioByUserId = async (req, res) => {
+  try {
+    let userId = parseInt(req.params.user_id)
+    let portfolio = await Portfolio.findAll({
+      where: { userId: userId }
+    })
+    res.send(portfolio)
+  } catch (error) {
+    throw error
+  }
+}
 
 const updatePortfolio = async (req, res) => {
   try {
@@ -47,5 +58,6 @@ module.exports = {
   getPortfolio,
   createPortfolio,
   updatePortfolio,
-  deletePortfolio
+  deletePortfolio,
+  getPortfolioByUserId
 }
