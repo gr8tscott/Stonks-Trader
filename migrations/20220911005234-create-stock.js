@@ -11,11 +11,25 @@ module.exports = {
       ticker: {
         type: Sequelize.STRING
       },
+      quantity: {
+        type: Sequelize.INTEGER
+      },
+      cost_basis: {
+        type: Sequelize.INTEGER
+      },
       watchlistId: {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
         references: {
           model: 'watchlists',
+          key: 'id'
+        }
+      },
+      portfolioId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'portfolios',
           key: 'id'
         }
       },

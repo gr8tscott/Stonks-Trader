@@ -10,16 +10,27 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Stock.belongsTo(models.Watchlist, { foreignKey: 'watchlistId' })
+      Stock.belongsTo(models.Portfolio, { foreignKey: 'portfolioId' })
     }
   }
   Stock.init(
     {
       ticker: DataTypes.STRING,
+      quantity: DataTypes.INTEGER,
+      cost_basis: DataTypes.INTEGER,
       watchlistId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',
         references: {
           model: 'watchlists',
+          key: 'id'
+        }
+      },
+      portfolioId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'portfolios',
           key: 'id'
         }
       }

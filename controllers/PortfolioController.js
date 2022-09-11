@@ -3,7 +3,7 @@ const { Portfolio } = require('../models')
 const createPortfolio = async (req, res) => {
   let create = await Portfolio.create({
     ...req.body,
-    portfolioId: req.query.name,
+    portfolioId: req.query.profit,
     portfolioId: req.query.userId
   })
   res.send(create)
