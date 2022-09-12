@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       cost_basis: {
-        type: Sequelize.INTEGER
+        type: Sequelize.DECIMAL
       },
       watchlistId: {
         type: Sequelize.INTEGER,

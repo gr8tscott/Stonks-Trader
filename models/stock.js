@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       ticker: DataTypes.STRING,
       quantity: DataTypes.INTEGER,
-      cost_basis: DataTypes.INTEGER,
+      cost_basis: DataTypes.DECIMAL,
       watchlistId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',

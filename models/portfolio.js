@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Portfolio.init(
     {
-      profit: DataTypes.INTEGER,
+      profit: DataTypes.DECIMAL,
       userId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',

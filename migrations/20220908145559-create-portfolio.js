@@ -17,7 +17,7 @@ module.exports = {
         }
       },
       profit: {
-        type: Sequelize.INTEGER
+        type: Sequelize.DECIMAL
       },
 
       createdAt: {
