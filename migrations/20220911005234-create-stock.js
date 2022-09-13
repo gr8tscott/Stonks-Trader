@@ -24,6 +24,7 @@ module.exports = {
           model: 'watchlists',
           key: 'id'
         }
+        //20220911005234
       },
       portfolioId: {
         type: Sequelize.INTEGER,

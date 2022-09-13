@@ -15,6 +15,7 @@ module.exports = {
           model: 'users',
           key: 'id'
         }
+        //20220908145559
       },
       profit: {
         type: Sequelize.DECIMAL
